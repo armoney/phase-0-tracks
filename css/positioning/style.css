@@ -1,0 +1,21 @@
+.crazy-octopus{
+	position: relative;
+}
+
+#octopus{
+	position: absolute;
+	top: 90px;
+	left: 25px;
+}
+#glasses{
+	position: absolute;
+	top: 190px;
+	left: 70px;
+
+}
+#hat{
+	position: absolute;
+	top: 0px;
+	left: 10px;
+
+}
