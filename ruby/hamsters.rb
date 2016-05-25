@@ -1,9 +1,3 @@
-# hamster's name (the clerk names any
-#  hamsters who come in without name tags, so all hamsters have names)
-# volume level from 1 to 10 (some people are light sleepers who won't adopt extra-squeaky hamsters)
-# fur color
-# whether the hamster is a good candidate for adoption
-# estimated age
 puts "Hi, what would you like to name this hamster?"
 name = gets.chomp
 
