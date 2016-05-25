@@ -1,0 +1,19 @@
+go to the floor that requested you and open the door
+
+leave the door open and wait 10 seconds
+
+after 10 seconds if nothing is blocking the door, close the door
+
+if something is blocking the door leave the door open. When the block is gone, stay open for 5 seconds before closing the door. 
+
+while closing the door, if something appears and blocks the door, stop closing and open the doors.  Wait 5 seconds before closing if nothing is blocking the door.
+
+close the doors.
+
+if the floor selected is up then the elevator will travel up before down and vice versa. 
+
+After the first floor is selected and the direction up or down has been assigned, all other floors that are subsequently selected in the same direction will be put in a queue, in numerical order (low to high if going up, high to low if traveling down).
+
+After reaching the top floor or the bottom floor, all of other floors selected will be put in the queue (low to high if going up, high to low if traveling down).
+
+If no floors are selected remain off. 
