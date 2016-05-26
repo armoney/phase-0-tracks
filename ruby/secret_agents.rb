@@ -11,7 +11,7 @@ def encrypt(str)
 		new_str = new_str + str[i].next
 		i += 1
 	end
-	p new_str
+	return new_str
 end
 
 # def encrypt(str)
@@ -32,7 +32,7 @@ def decrypt(str)
 		new_str = new_str + alphabet[alpha_num]
 		i += 1
 	end
-	p new_str
+	return new_str
 end
 
 if answer == "encrypt"
