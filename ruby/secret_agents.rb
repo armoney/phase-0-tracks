@@ -1,3 +1,9 @@
+puts "Hi secret agent, would you like to decrypt or encrypt your password?"
+answer = gets.chomp
+
+puts "What is the password?"
+password = gets.chomp
+
 def encrypt(str)
 	i = 0
 	new_str = ""
@@ -18,16 +24,26 @@ end
 
 def decrypt(str)
 	i = 0
+	new_str = ""
 	alphabet = "abcdefghijklmnopqrstuvwxyz"
 	while i < str.length
 		alpha_num = alphabet.index(str[i])
 		alpha_num -= 1
-		puts alphabet[alpha_num]
+		new_str = new_str + alphabet[alpha_num]
 		i += 1
 	end
+	p new_str
 end
 
-decrypt(encrypt("swordfish"))
+if answer == "encrypt"
+	p encrypt(password)
+elsif answer == "decrypt"
+	p decrypt(password)
+else 
+	p "Sorry answer can only be encrypt or decrypt"
+end
+
+#decrypt(encrypt("swordfish"))
 #it works because encrypt advances the letters forward
 #and decrypt reverses it back to the original string. 
 #This code works because the output of encrypt is a string
