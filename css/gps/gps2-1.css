@@ -1,0 +1,67 @@
+html {
+  background-image: url("http://i.stack.imgur.com/jGlzr.png");
+}
+
+header{
+   background-color: none;
+   padding-left: 50px;
+   padding-right: 50px;
+   box-sizing: border-box;
+   width: 98%;
+   font-size: 1.5em;
+}
+
+h1{
+  font-size: 3em;
+  font-weight: bold;  
+}
+
+section {
+  font-family: "Georgia", serif;
+  box-sizing: border-box;
+  border-style: none;
+  padding: 50px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  display: inline-block;
+  width: 49%;
+  vertical-align: text-top;
+  background-color: white;
+  border-radius: 20px;
+  margin-top: 20px;
+  list-style-type: circle;
+}
+
+/* .column-1{
+  font-family: "Georgia", sans-serif;
+  box-sizing: border-box;
+  border-style: none;
+  padding: 10px;
+  display: inline-block;
+  width: 49%;
+  vertical-align: text-top;
+  background-color: white;
+} */
+
+/* .column-2{
+  font-family: "Georgia", sans-serif;
+  box-sizing: border-box;
+  border-style: none;
+  padding: 10px;
+  box-sizing: border-box;
+  display: inline-block;
+  width: 49%;
+  vertical-align: text-top;
+  background-color: white; 
+} */
+
+
+footer{
+  background-color: none;
+  border-style: none;
+  border-radius: 20px;
+  padding: 10px;
+  font-size: 1.5em;
+  padding-left: 50px;
+  padding-right: 50px;
+}
