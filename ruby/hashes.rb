@@ -16,13 +16,25 @@ puts "Number of children"
 child_val = gets.to_i
 
 puts "Decor theme"
-decor_val = get.chomp
+decor_val = gets.chomp
+
+puts "Allergies"
+allergy_val = gets.chomp
+
+puts "Hobbies"
+hobby_val = gets.chomp
+
+puts "Distastes"
+distaste_val = gets.chomp
 
 clients = {
 	Name: name_val,
 	Age: age_val,
 	Children: child_val,
 	Decor: decor_val,
+	Allergies: allergy_val,
+	Hobbies: hobby_val,
+	Distastes: distaste_val
 }
 
 puts "************************************"
@@ -54,8 +66,26 @@ elsif mistakes == "Number of children"
 	clients.each{|key, value| puts "#{key}: #{value}" }
 elsif mistakes == "Decor theme"
 	puts "Please reenter decor theme"
-	decor_val = gets.to_i
+	decor_val = gets.chomp
 	clients[:Decor] = decor_val
+	clients.each{|key, value| puts "#{key}: #{value}" }
+	puts "***Thank you***"
+elsif mistakes == "Allergies"
+	puts "Please reenter allergies"
+	allergy_val = gets.chomp
+	clients[:Allergies] = allergy_val
+	clients.each{|key, value| puts "#{key}: #{value}" }
+	puts "***Thank you***"
+elsif mistakes == "Hobbies"
+	puts "Please reenter hobbies"
+	hobby_val = gets.chomp
+	clients[:Hobbies] = hobby_val
+	clients.each{|key, value| puts "#{key}: #{value}" }
+	puts "***Thank you***"
+elsif mistakes == "Distastes"
+	puts "Please reenter distastes"
+	distate_val = gets.chomp
+	clients[:Distastes] = distaste_val
 	clients.each{|key, value| puts "#{key}: #{value}" }
 	puts "***Thank you***"
 else
