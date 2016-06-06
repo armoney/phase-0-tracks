@@ -1,8 +1,10 @@
-puts "****Welcome to Spy Namer Pro 3000****" 
+puts "***** Welcome to Spy Namer Pro 3000 *****" 
 puts"If you would like to create a spy name, enter a name (to end type quit)"
 user_name = ""
 spy_records = {}
+
 until user_name == "quit"
+
 	#swaps first name and last name, downcases
 	def spy_name(real_name)
 		split_real_name = real_name.split(' ')
@@ -12,7 +14,7 @@ until user_name == "quit"
 		return last_first_name
 	end
 	
-	#changes vowel to next (aeiou)
+	#changes vowel to next vowel (aeiou)
 	def next_vowel(last_first_name)
 		i = 0
 		until i > last_first_name.length
@@ -50,6 +52,9 @@ until user_name == "quit"
 				i += 1
 			elsif last_first_name[i] == " "
 				i += 1
+			elsif last_first_name[i] == "z"
+				last_first_name[i]= "b"
+				i += 1
 			else
 				alpha_num = alphabet.index(last_first_name[i])
 				alpha_num += 1
@@ -64,14 +69,18 @@ until user_name == "quit"
 	user_name = gets.chomp
 	your_spy_name = next_cons(next_vowel(spy_name(user_name)))
 	
+	#added if/else so "quit" isn't considered a name
 	if user_name == "quit"
 		break
 	else
 		puts "Your spy name is #{your_spy_name}!"
 	end
+
+	#stores data into spy_records hash
 	spy_records.store(user_name, your_spy_name)
 end
-p spy_records.each {|key, value| puts "#{value} is actually #{key}" }
+
+spy_records.each {|key, value| puts "#{value} is actually #{key}" }
 
 # p next_cons(next_vowel(spy_name("Felicia Torres")))
 # p next_cons(next_vowel(spy_name("Armon Arcuri")))
