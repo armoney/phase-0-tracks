@@ -1,3 +1,11 @@
+# ask user for name
+# swap first and last name
+# change the letters to lower case
+# change the vowels to the next vowel in the sequence: aeiou
+# change the consonants to the next consonant in the sequence: bcdfghjklmnpqrstvwxyz
+# capitalize the first and last name
+
+
 puts "***** Welcome to Spy Namer Pro 3000 *****" 
 puts"If you would like to create a spy name, enter a name (to end type quit)"
 user_name = ""
