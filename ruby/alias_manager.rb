@@ -58,5 +58,7 @@ end
 
 
 p next_cons(next_vowel(spy_name("Felicia Torres")))
+p next_cons(next_vowel(spy_name("Armon Arcuri")))
+p next_cons(next_vowel(spy_name("Muhammad Ali")))
 
 
