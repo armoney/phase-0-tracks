@@ -1,6 +1,7 @@
 puts "****Welcome to Spy Namer Pro 3000****" 
 puts"If you would like to create a spy name, enter a name (to end type quit)"
 user_name = ""
+spy_records = {}
 until user_name == "quit"
 	#swaps first name and last name, downcases
 	def spy_name(real_name)
@@ -59,10 +60,18 @@ until user_name == "quit"
 		end
 		return last_first_name.split.map(&:capitalize).join(' ')
 	end
+	
 	user_name = gets.chomp
 	your_spy_name = next_cons(next_vowel(spy_name(user_name)))
-	puts "Your spy name is #{your_spy_name}!"
+	
+	if user_name == "quit"
+		break
+	else
+		puts "Your spy name is #{your_spy_name}!"
+	end
+	spy_records.store(user_name, your_spy_name)
 end
+p spy_records.each {|key, value| puts "#{value} is actually #{key}" }
 
 # p next_cons(next_vowel(spy_name("Felicia Torres")))
 # p next_cons(next_vowel(spy_name("Armon Arcuri")))
