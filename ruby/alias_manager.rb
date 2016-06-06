@@ -12,15 +12,15 @@ def next_vowel(last_first_name)
 	i = 0
 	until i > last_first_name.length
 		if last_first_name[i] == "a"
-			last_first_name.tr!("a","e")
+			last_first_name[i] = "e"
 		elsif last_first_name[i] == "e"
-			last_first_name.tr!("e","i")
+			last_first_name[i] = "i"
 		elsif last_first_name[i] == "i"
-			last_first_name.tr!("i","o")
+			last_first_name[i] = "o"
 		elsif last_first_name[i] == "o"
-			last_first_name.tr!("o","u")
+			last_first_name[i] = "u"
 		elsif last_first_name[i] == "u"
-			last_first_name.tr!("u","a")
+			last_first_name[i]= "a"
 		else 
 		end
 		i += 1 
@@ -53,10 +53,10 @@ def next_cons(last_first_name)
 			i += 1
 		end
 	end
-	return last_first_name.capitalize
+	return last_first_name.split.map(&:capitalize).join(' ')
 end
 
 
-next_cons(next_vowel(spy_name("jimmy seto")))
+p next_cons(next_vowel(spy_name("Felicia Torres")))
 
 
