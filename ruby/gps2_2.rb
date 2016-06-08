@@ -47,24 +47,23 @@
 #Release 2: Intial Solution
 
 # Method to create a list
+grocery_list = {}
 
-def grocery_list (str)
-hash_list = {}
-  array_items = str.split(' ')
-  array_items.each do |item|
-    hash_list[item] = 0
+def grocery_list (grocery_list, grocery_item_str)
+  array_items = grocery_item_str.split(' ')
+  array_items.each do |grocery_item|
+    grocery_list[grocery_item] = 0
   end
-  return hash_list
+  return grocery_list
 end
 
 #test code
 # p grocery_list("blueberries bacon milk eggs")
 
 # Method to add an item to a list
-def add_item (str)
-  hash_list = {}
-  hash_list.store(str, 0)
-  return hash_list
+def add_item (grocery_list, grocery_item)
+  grocery_list.store(grocery_item, 0)
+  return print_list
 end
 
 #test code
@@ -99,7 +98,7 @@ end
 
 # Method to print a list and make it look pretty
 def print_list
-  hash_list.each { |grocery_item, quantity| puts "#{grocery_item} : #{quantity}"}
+  grocery_list.each { |grocery_item, quantity| puts "#{grocery_item} : #{quantity}"}
 end
 
 # test code
