@@ -54,7 +54,7 @@ def grocery_list (grocery_list, grocery_item_str)
   array_items.each do |grocery_item|
     grocery_list[grocery_item] = 0
   end
-  return grocery_list
+  return print_list
 end
 
 #test code
@@ -73,10 +73,9 @@ end
 
 # Method to remove an item from the list
 
-def remove_item(str)
-  hash_list = {}
-  hash_list.delete(str)
-  hash_list
+def remove_item(grocery_list, grocery_item)
+  grocery_list.delete(grocery_item)
+  return print_list
 end
 
 # test code
@@ -84,20 +83,19 @@ end
 
 
 # Method to update the quantity of an item
-def update_quantity(str_key, str_value)
-  hash_list = {}
-  if hash_list.has_key?(str_key)
-    hash_list[str_key] = str_value
+def update_quantity(grocery_list, grocery_item, new_quantity)
+  if grocery_list.has_key?(grocery_item)
+    grocery_list[grocery_item] = new_quantity
   else
-    puts "Invalid key."
+    puts "Sorry, that's not on the list (check your spelling)."
   end
-  hash_list
+  return print_list
 end
 # test code
 # p update_quantity("bananas", "0")
 
 # Method to print a list and make it look pretty
-def print_list
+def print_list(grocery_list)
   grocery_list.each { |grocery_item, quantity| puts "#{grocery_item} : #{quantity}"}
 end
 
