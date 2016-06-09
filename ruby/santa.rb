@@ -11,11 +11,11 @@ class Santa
 		p "That was a good #{cookie}!"
 	end
 	
-	def initialize(gender, ethnicity)
+	def initialize(gender, ethnicity, age)
 		@gender = gender
 		@ethnicity = ethnicity
 		@reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
-		@age = 0
+		@age = age
 	end
 
 	def celebrate_birthday
@@ -49,17 +49,14 @@ class Santa
 	# end
 end
 
-santas = []
-
-#Instance
-# new_santa = Santa.new
-
 #DRIVER CODE Release 1
+# new_santa = Santa.new
 # new_santa.speak
 # new_santa.eat_milk_and_cookies("chocolate chip cookie")
 
-#Driver code: diverse initializations Release 2
 
+#Driver code: diverse initializations Release 2
+# santas = []
 # santas << Santa.new("agender", "black")
 # santas << Santa.new("female", "Latino")
 # santas << Santa.new("bigender", "white")
@@ -68,29 +65,43 @@ santas = []
 # santas << Santa.new("gender fluid", "Mystical Creature (unicorn)")
 # santas << Santa.new("N/A", "N/A")
 
+
 #Driver code: diverse initializations using arrays and loop
-example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
-example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
+# example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
+# example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
 # example_genders.length.times do |i|
 #   santas << Santa.new(example_genders[i], example_ethnicities[i])
 # end
 
+
 #Driver code: diverse initializations using hash and loop
+# example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
+# example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
 # example_genders_ethnicities = example_genders.zip(example_ethnicities).to_h
 # example_genders_ethnicities.each do |gender, ethnicity|
 # 	santas << Santa.new(gender, ethnicity)
 # end
 
+
 #MORE DRIVER CODE for Release 3
-new_santa = Santa.new("agender", "black")
-p new_santa.gender
-p new_santa.ethnicity
-new_santa.celebrate_birthday
-p new_santa.age
+# new_santa = Santa.new("agender", "black")
+# p new_santa.gender
+# p new_santa.ethnicity
+# new_santa.celebrate_birthday
+# p new_santa.age
 
-new_santa.get_mad_at = "Vixen"
-p new_santa.reindeer_ranking
+# new_santa.get_mad_at = "Vixen"
+# p new_santa.reindeer_ranking
 
-p new_santa.new_gender = "bigender"
+# p new_santa.new_gender = "bigender"
+
+
+#DRIVER CODE Release 4
+# example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
+# example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
+# age = [1..140]
+# 100.times do
+#   p Santa.new(example_genders.sample, example_ethnicities.sample, rand(141))
+# end
 
 
