@@ -128,3 +128,32 @@ loop do
 end
 puts "Here is a final review of your grocery list:"
 print_list(grocery_list)
+
+#Release 5: Reflect
+
+# What did you learn about pseudocode from working on this challenge?
+
+#I learned that pseudocode should only include plain english and not
+#references to coding methods
+
+# What are the tradeoffs of using arrays and hashes for this challenge?
+
+#If the user only wanted to make a grocery list without specifying quantity
+#or any other piece of information relative to the item, an array would be 
+#more simple to use. But using a hash is more appropriate otherwise. 
+
+# What does a method return?
+
+#A method returns what ever you want
+
+# What kind of things can you pass into methods as arguments?
+
+#You can pass any object into a method as an argument
+
+# How can you pass information between methods?
+
+#You just call a method within a second method
+
+# What concepts were solidified in this challenge, and what concepts are still confusing?
+
+#The concept of multiple methods manipulating the same data structure
