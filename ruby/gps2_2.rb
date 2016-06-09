@@ -49,12 +49,11 @@
 # Method to create a list
 grocery_list = {}
 
-def grocery_list (grocery_list, grocery_item_str)
+def grocery_list_creator(grocery_list, grocery_item_str)
   array_items = grocery_item_str.split(' ')
   array_items.each do |grocery_item|
     grocery_list[grocery_item] = 0
   end
-  return print_list
 end
 
 #test code
@@ -63,7 +62,6 @@ end
 # Method to add an item to a list
 def add_item (grocery_list, grocery_item)
   grocery_list.store(grocery_item, 0)
-  return print_list
 end
 
 #test code
@@ -75,7 +73,6 @@ end
 
 def remove_item(grocery_list, grocery_item)
   grocery_list.delete(grocery_item)
-  return print_list
 end
 
 # test code
@@ -89,7 +86,6 @@ def update_quantity(grocery_list, grocery_item, new_quantity)
   else
     puts "Sorry, that's not on the list (check your spelling)."
   end
-  return print_list
 end
 # test code
 # p update_quantity("bananas", "0")
@@ -109,18 +105,26 @@ end
 puts "\n" + "Grocery List".rjust(20) + "\n"
 puts "Please type a list of items you would like to purchase:"
 answer = gets.chomp
-p grocery_list(answer)
-puts "How many of each item would you like to purchase? Please type the item you'd like to update first:"
-answer2 = gets.chomp
-puts "How many #{answer2} would you like?"
-answer3 = gets.chomp
-p update_quantity(answer2, answer3)
-puts "Is there any item you'd like to remove? (y/n)"
-answer4 = gets.chomp
-  if answer4 == "y"
-    puts "Okay. Please type the item you'd like to remove:"
-    answer5 = gets.chomp
-    p remove_item(answer5)
-  end
+grocery_list_creator(grocery_list, answer)
+print_list(grocery_list)
+
+puts "How many of each item would you like to purchase?"
+loop do
+  puts "Please type the item you'd like to update first: (type 'done' when finished)"
+  answer2 = gets.chomp
+  puts "How many #{answer2} would you like?"
+  answer3 = gets.chomp.to_i
+  update_quantity(grocery_list, answer2, answer3)
+  print_list(grocery_list)
+  break if answer2 == "done"
+end
+
+puts "Enter any item you would like to remove. Type 'n' if finished"
+loop do
+  answer4 = gets.chomp
+  remove_item(grocery_list, answer4)
+  print_list(grocery_list)
+  break if answer4 = "n"
+end
 puts "Here is a final review of your grocery list:"
-p print_list
+print_list(grocery_list)
