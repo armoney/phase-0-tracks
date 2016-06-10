@@ -51,7 +51,9 @@ players << Basketball_player.new(player_height, player_speed, player_ball_handli
 
 end
 
-p players
+players.each_slice(4) {|a| p a}
+
+
 
 
 
