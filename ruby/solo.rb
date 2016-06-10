@@ -27,10 +27,11 @@ end
 
 players = []
 
-puts "Hi, how many basketball players would you like to make?"
-num_players = gets.chomp.to_i
+loop do
 
-num_players.times do
+puts "Would you like to create a basketball player?(y/n)"
+answer = gets.chomp
+break if answer == "n"
 
 puts "How tall is the basketball player? (i.e. 6'7)"
 player_height = gets.chomp
@@ -50,7 +51,6 @@ players << Basketball_player.new(player_height, player_speed, player_ball_handli
 
 end
 
-#DRIVER CODE
 p players
 
 
