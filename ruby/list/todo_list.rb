@@ -1,14 +1,19 @@
-class ToDoList
-	def initialize(list_item1, list_item2)
-		@get_items = 
-		
+class TodoList
+	attr_accessor :get_items
+
+	def initialize(var1)
+		@get_items = var1
 	end
 
 	def add_item(new_item)
-		list << new_item
+		@get_items << new_item
+	end
+
+	def delete_item(del_item)
+		@get_items.delete(del_item)
+	end
+
+	def get_item(index)
+		@get_items[index]
 	end
 end
-list = []
-
-# list_instance.ToDoList("do the dishes", "mow the lawn")
-list_instance.ToDoList
