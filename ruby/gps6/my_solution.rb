@@ -10,6 +10,7 @@ require_relative 'state_data'
 
 class VirusPredictor
 
+#initializes the class
   def initialize(state_of_origin, population_density, population)
     @state = state_of_origin
     @population = population
@@ -17,13 +18,13 @@ class VirusPredictor
   end
 
   def virus_effects
-    predicted_deaths(@population_density, @population, @state)
-    speed_of_spread(@population_density, @state)
+    predicted_deaths
+    speed_of_spread
   end
 
   private
 
-  def predicted_deaths(population_density, population, state)
+  def predicted_deaths
     # predicted deaths is solely based on population density
     if @population_density >= 200
       number_of_deaths = (@population * 0.4).floor
@@ -41,7 +42,7 @@ class VirusPredictor
 
   end
 
-  def speed_of_spread(population_density, state) #in months
+  def speed_of_spread #in months
     # We are still perfecting our formula here. The speed is also affected
     # by additional factors we haven't added into this functionality.
     speed = 0.0
@@ -70,18 +71,43 @@ end
  # initialize VirusPredictor for each state
 
 
-alabama = VirusPredictor.new("Alabama", STATE_DATA["Alabama"][:population_density], STATE_DATA["Alabama"][:population])
-alabama.virus_effects
+# alabama = VirusPredictor.new("Alabama", STATE_DATA["Alabama"][:population_density], STATE_DATA["Alabama"][:population])
+# alabama.virus_effects
 
-jersey = VirusPredictor.new("New Jersey", STATE_DATA["New Jersey"][:population_density], STATE_DATA["New Jersey"][:population])
-jersey.virus_effects
+# jersey = VirusPredictor.new("New Jersey", STATE_DATA["New Jersey"][:population_density], STATE_DATA["New Jersey"][:population])
+# jersey.virus_effects
 
-california = VirusPredictor.new("California", STATE_DATA["California"][:population_density], STATE_DATA["California"][:population])
-california.virus_effects
+# california = VirusPredictor.new("California", STATE_DATA["California"][:population_density], STATE_DATA["California"][:population])
+# california.virus_effects
 
-alaska = VirusPredictor.new("Alaska", STATE_DATA["Alaska"][:population_density], STATE_DATA["Alaska"][:population])
-alaska.virus_effects
+# alaska = VirusPredictor.new("Alaska", STATE_DATA["Alaska"][:population_density], STATE_DATA["Alaska"][:population])
+# alaska.virus_effects
 
+STATE_DATA.each {|state_name, population_data| 
+  us_state = VirusPredictor.new(state_name, population_data[:population_density], population_data[:population])
+  us_state.virus_effects
+}
 
 #=======================================================================
 # Reflection Section
+# What are the differences between the two different hash syntaxes shown in the state_data file?
+
+# one is using the " " style for the key, the other is using the symbol style
+
+# What does require_relative do? How is it different from require?
+
+# the word 'relative' in require_relative means that the file is in the same directory, just simply putting
+# 'require' then *requires* that you add the full link/address of the file
+
+# What are some ways to iterate through a hash?
+
+# Using .each is one way.
+
+# When refactoring virus_effects, what stood out to you about the variables, if anything?
+
+# since the variables are instance variables that are not changed when calling the methods, they are
+# not needed, so they can be removed
+
+# What concept did you most solidify in this challenge
+
+# the concept of instance variables
