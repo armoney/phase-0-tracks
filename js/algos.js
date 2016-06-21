@@ -7,13 +7,11 @@
 //return stored item which is the longest phrase
 
 function longest_phrase(arr) {
-  for (var i = 0; i < (arr.length - 1); i++) {
-	var current_longest = arr[0];
-	if (arr[i].length < arr[i+1].length && current_longest.length < arr[i+1].length){
-		var current_longest = arr[i+1];
-	} else {
+  var current_longest = arr[0];
+  for (var i = 0; i < arr.length; i++) {
+	if (current_longest.length < arr[i].length) {
 		var current_longest = arr[i];
-	}
+	} 
 	}
 	return current_longest
 }
