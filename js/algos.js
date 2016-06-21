@@ -25,7 +25,16 @@ function longest_phrase(arr) {
 //
 
 function shared_key_value(obj_one, obj_two){
-	return obj_one['name'];
+	
+}
+
+}
+
+//PSEUDOCODE GENERATE RANDOM TEST DATA
+//takes an integer and creates an array of that length with random words
+
+function random_word_arr(int){
+
 }
 
 
