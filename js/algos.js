@@ -1,4 +1,4 @@
-// PSEUDOCODE
+// PSEUDOCODE LONGEST PHRASE IN ARRAY
 //itterate though each item in array
 //check the length of first item and store the item
 //check the length of next item
@@ -16,7 +16,12 @@ function longest_phrase(arr) {
 	return current_longest
 }
 
-//DRIVER CODE
+// PSEUDOCODE SHARED KEY-VALUE BETWEEN OBJECTS
+
+
+//DRIVER CODE LONGEST PHRASE IN ARRAY
 console.log(longest_phrase(["long phrase","longest phrase","longer phrase"]));
 console.log(longest_phrase(["Buster", "Minxy", "Princess Fluffypaws"]));
 console.log(longest_phrase(["hello what's up", "nothing", "at all"]));
+
+//DRIVER CODE SHARED KEY-VALUE BETWEEN OBJECTS
