@@ -17,6 +17,7 @@ function longest_phrase(arr) {
 }
 
 // PSEUDOCODE SHARED KEY-VALUE BETWEEN OBJECTS
+<<<<<<< HEAD
 //itterate through each key-value pair 
 //compare first key of first object to all keys of second
 //if key has a match, compare values
@@ -45,3 +46,13 @@ function random_word_arr(int){
 
 //DRIVER CODE SHARED KEY-VALUE BETWEEN OBJECTS
 console.log(shared_key_value({ name: 'Spot', age: 3, isGoodDog: true, weight: 13, adopted: true }, {name: 'Spot', 'age': 3, isGoodDog: true}));
+=======
+
+
+//DRIVER CODE LONGEST PHRASE IN ARRAY
+console.log(longest_phrase(["long phrase","longest phrase","longer phrase"]));
+console.log(longest_phrase(["Buster", "Minxy", "Princess Fluffypaws"]));
+console.log(longest_phrase(["hello what's up", "nothing", "at all"]));
+
+//DRIVER CODE SHARED KEY-VALUE BETWEEN OBJECTS
+>>>>>>> master
