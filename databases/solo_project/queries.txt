@@ -1,0 +1,41 @@
+Display the information in one table (either table is fine).
+
+	SELECT * FROM model;
+
+Update an item that meets some condition (you can choose a condition that makes sense).
+
+	UPDATE model SET year=1993 WHERE name="F1";
+
+Display the information in both tables using one query.
+
+	sqlite> SELECT *
+	   ...> FROM model
+	   ...> INNER JOIN make
+	   ...> ON model.make_id=make.id
+	   ...> ;
+
+Display a narrower selection of columns (fewer columns than all of them, in other words) from both tables using one query.
+
+	sqlite> SELECT model.name, model.year, make.name
+	   ...> FROM model
+	   ...> INNER JOIN make
+	   ...> ON model.make_id=make.id;
+
+Delete an item that meets some condition (you can choose a condition that makes sense).
+
+	DELETE FROM model WHERE name="F1";
+
+DIFFERENT JOINS:
+
+	SELECT make.name, model.name
+	FROM model
+	RIGHT JOIN make
+	ON model.make_id=make.id;
+
+	SELECT make.name, model.name
+	FROM model
+	LEFT JOIN make
+	ON model.make_id=make.id;
+
+
+
