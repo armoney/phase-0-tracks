@@ -11,3 +11,5 @@ link the third database to the reviews database by referencing its foreign key, 
 SELECT users.first_name, users.last_name, businesses.name, reviews.stars, reviews.comment FROM reviews JOIN users ON reviews.users_id = users.id JOIN businesses ON reviews.business_id = businesses.id;
 
 4. View the data of all three tables for just one particular business
+
+	SELECT 
