@@ -9,3 +9,7 @@ function changePicborder(event) {
 
 var photo = document.getElementById("lebron-photo");
 photo.addEventListener("click", changePicborder);
+
+var list = document.getElementsByTagName("UL")[0];
+list.getElementsByTagName("LI")[0].innerHTML = "OSU, baby.";
+
