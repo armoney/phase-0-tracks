@@ -1,3 +1,23 @@
 div {
-	
+    width: 120px;
+    height: 100%;
+    float: left;
+    padding: 10px;
+    margin: 10px;
+    background-color: #EEEEEE;
+    text-align:center;
+    vertical-align:middle;
+    color: white;
+}
+
+#no {
+	width: 120px;
+    height: 100%;
+    float: left;
+    padding: 10px;
+    margin: 10px;
+    background-color: #fff000;
+    text-align:center;
+    vertical-align:middle;
+    color: black;
 }
