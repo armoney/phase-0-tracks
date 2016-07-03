@@ -62,11 +62,10 @@ get '/great_job/' do
 end
 
 get '/add/' do
-  a = params[:a]
-  p type(a) 
-  # b = params[:b]
-  # result = a.to_i + b.to_i
-  # p result
+  a = params[:a].to_i
+  b = params[:b].to_i
+  sum = a + b 
+  "#{sum}"
 end 
 
 
