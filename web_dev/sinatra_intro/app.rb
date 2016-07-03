@@ -8,9 +8,9 @@ db.results_as_hash = true
 # write a basic GET route
 # add a query parameter
 # GET /
-get '/' do
-  "#{params[:name]} is #{params[:age]} years old."
-end
+# get '/' do
+#   "#{params[:name]} is #{params[:age]} years old."
+# end
 
 # write a GET route with
 # route parameters
@@ -44,3 +44,30 @@ get '/students/:id' do
   student = db.execute("SELECT * FROM students WHERE id=?", [params[:id]])[0]
   student.to_s
 end
+
+
+#A /contact route that displays an address
+get '/contact' do
+  "1600 Pennsylvania Ave NW, Washington DC"
+end
+
+#A /great_job route that can take a person's name as a query parameter (not a route parameter) and say "Good job, [person's name]!". If the query parameter is not present, the route simply says "Good job!"
+get '/great_job/' do
+  name = params[:name]
+  if name
+    "Great job, #{name}!"
+  else
+    "Great job!"
+  end
+end
+
+get '/add/' do
+  a = params[:a]
+  p type(a) 
+  # b = params[:b]
+  # result = a.to_i + b.to_i
+  # p result
+end 
+
+
+

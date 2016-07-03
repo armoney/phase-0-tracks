@@ -4,6 +4,10 @@
 	<title>Practice</title>
 </head>
 <body>
-	<p>Hello</p>
+	  <ul>
+    <% @students.each do |student| %>
+      <li><%= student['name'] %>, <%= student['campus'] %></li>
+    <% end %>
+  </ul>
 </body>
 </html>

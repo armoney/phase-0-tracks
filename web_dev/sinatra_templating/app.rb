@@ -25,6 +25,7 @@ post '/students' do
 end
 
 get '/practice' do
+	@students = db.execute("SELECT * FROM students")
 	erb :practice
 end
 
