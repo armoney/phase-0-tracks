@@ -25,8 +25,17 @@ post '/students' do
 end
 
 get '/practice' do
-	@students = db.execute("SELECT * FROM students")
+	@campuses = db.execute("SELECT * FROM campuses")
 	erb :practice
+end
+
+get '/campus/new' do
+	erb :new_campus
+end
+
+post '/campus' do
+	db.execute("INSERT INTO campuses (campus) VALUES(?)", [params['campus']])
+	redirect '/practice'
 end
 
 # add static resources
